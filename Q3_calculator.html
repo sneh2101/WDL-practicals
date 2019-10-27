@@ -1,0 +1,64 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<div id ="s">
+			<input type ="text" id = "myText">
+		<div id ="calc">
+			<input type=button id=1 value =1 height=40 width = 40 onclick= put(1)>
+			<input type=button id=2 value =2 height=40 width = 40 onclick= put(2)>
+			<input type=button id=3 value =3 height=40 width = 40 onclick= put(3)>
+			<input type=button id=4 value =4 height=40 width = 40 onclick= put(4)><br>
+			<input type=button id=5 value =5 height=40 width = 40 onclick= put(5)>
+			<input type=button id=6 value =6 height=40 width = 40 onclick= put(6)>
+			<input type=button id=7 value =7 height=40 width = 40 onclick= put(7)>
+			<input type=button id=8 value =8 height=40 width = 40 onclick= put(8)><br>
+			<input type=button id=9 value =9 height=40 width = 40 onclick= put(9)>
+			<input type=button id=0 value =0 height=40 width = 40 onclick= put(0)>
+			<input type=button id=C value =C height=40 width = 40 onclick= put(10)>
+			<input type=button id=+ value =+ height=40 width = 40 onclick= put("+")><br>
+			<input type=button id=- value =- height=40 width = 40 onclick= put("-")>
+			<input type=button id=* value =* height=40 width = 40 onclick= put("*")>
+			<input type=button id=/ value =/ height=40 width = 40 onclick= put("/")>
+			<input type=button id== value == height=40 width = 40 onclick= calc()>
+		</div>
+	</div>
+	</body>
+</html>
+
+<script>
+function calc(){
+	var x = eval(document.getElementById("myText").value);
+	document.getElementById("myText").value = x;
+
+}
+function put(a)
+{
+	if(a == 10)
+	{
+		document.getElementById("myText").value = "";
+	}
+	else 
+	{
+		document.getElementById("myText").value +=a;
+	}
+}
+</script>
+
+<style>
+	#s{
+	
+ position:absolute;
+  top: 40%;
+  left: 40%;
+  
+  
+  }
+#calc > input
+{height: 40;
+width: 40;
+background: rgb(2,0,36);
+color:#FFF;
+
+} 
+</style>
