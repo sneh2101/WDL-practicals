@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type ="text/javascript">
+	function bill()
+	{
+		var quant = document.getElementById("quant").value;
+		var amount;
+		var toy = document.getElementById("toys").value;
+		if(toy == "lego")
+		{
+			 amount = quant* 1000;
+		}
+		else if(toy == "Bratz")
+		{
+			 amount = quant* 1100;
+		}
+		else if(toy == "Monopoly")
+		{
+			amount = quant* 1200;
+		}
+
+		
+		document.getElementById("billing").value= "The final bill is :" + amount ;
+	}
+
+</script>
+
+</head>
+<body>
+<table cellspacing ="10" cellpadding="5" border =2>
+	<tr>
+		<td>
+			<select id="toys" value="toys">
+			<option>Toys and their prices </option>
+			<option value ="lego"> Lego Rs.1000 </option>
+			<option value ="Bratz"> Bratz Rs.1100 </option>
+			<option value ="Monopoly"> Monopoly Rs.1200 </option>
+		</select>
+	</td>
+	<td>
+		Enter The Quantity : <input type ="number" required id="quant">
+	</td>
+	<td rowspan="2"> <input type ="button" id="bttn" value="Generate" onclick="bill()"> </td>
+</tr>
+<tr>
+	<td><input type="text" id ="billing"></td>
+</tr>
+</body>
+</html>
