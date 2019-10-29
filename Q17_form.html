@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+	function validation()
+	{
+		var userid = document.myForm.userid;
+		var password = document.myForm.password;
+		var name = document.myForm.name;
+		var address = document.myForm.address;
+		var country = document.myForm.country;
+		var zip = document.myForm.zip;
+		var email = document.myForm.email;
+		var male= document.myForm.male;
+		var female = document.myForm.female;
+		
+		if(uservalid(userid))
+		{
+			if(passvalid(password))
+			{
+				if(namevalid(name))
+				{
+					if(addvalid(address))
+					{
+						if(countvalid(country))
+						{
+							if(zipvalid(zip))
+							{
+								if(emailvalid(email)){
+									if(gendervalid(male,female))
+									{
+
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		return false;
+
+	}
+
+	function uservalid(userid)
+	{
+		var len = userid.value.length;
+		if(len == 0 || len < = 5 || len >= 12)
+		{
+			alert("required and must be of length 5 to 12");
+			userid.focus();
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+
+
+	function passvalid(password)
+	{
+		var len = password.value.length;
+		if(len == 0 || len < = 7 || len >= 12)
+		{
+			alert("required and must be of length 7 to 12");
+			password.focus();
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+
+	function namevalid(name)
+	{
+		var letters = /^[A-Za-z]+$/;
+		if(name.value.match(letters))
+		{
+			return true;
+		}
+		else{
+			alert("required and must have alphabets only");
+			name.focus();
+			return false;
+		}
+	}
+	function addvalid(address)
+	{
+		var letters = /^[0-9A-Za-z]+$/;
+		if(address.value.match(letters))
+		{
+			return true;
+		}
+		else{
+			alert("required and must have alphanumeric characters only");
+			address.focus();
+			return false;
+		}
+	}
+
+	function countvalid(country)
+	{
+		
+		if(country.value =="Default")
+		{
+			alert("Seelct your country");
+			country.focus();
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+function zipvalid(zip)
+	{
+		var numbers = /^[0-9]+$/;
+		if(zip.value.match(numbers))
+		{
+			return true;
+		}
+		else{
+			alert("required and must have alphanumeric characters only");
+			zip.focus();
+			return false;
+		}
+	}
+
+	function emailalid(email)
+	{
+		var letters = /^[\\w-_\.]*[\\w-_\.]\@[\\w]\.+[\\w]+[\\w]$/;
+		if(email.value.match(letters))
+		{
+			return true;
+		}
+		else{
+			alert("required and must be in the email format");
+			email.focus();
+			return false;
+		}
+	}
+
+function gendervalid(male,female)
+	{
+		var x =0;
+		if(male.checked)
+		{
+			x++;
+
+		}
+		if(female.checked)
+		{
+			x++;
+			
+		}
+		if(x==0)
+		{
+			alert("Seelct Male/Female");
+			male.focus();
+			return false;
+		}
+		else{
+			alert("form submitted");
+			window.location.reload();
+			return true;
+		}
+	}	
+
+</script>
+</head>
+<body onload="document.myForm.userid.focus();">
+<h1> Registration Form </h1>
+<form name="myForm" onSubmit="return validation();">
+<ul>
+	<li><label for="userid">User Id: </label></li>
+	<li><input type="text" name="userid" size ="12"></li>
+	<li><label for="password">Password: </label></li>
+	<li><input type="text" name="password" size ="12"></li>
+	<li><label for="name">Name: </label></li>
+	<li><input type="text" name="name" size ="50"></li>
+	<li><label for="address">Address: </label></li>
+	<li><input type="text" name="address" size ="50"></li>
+	<li><label for="country">Country: </label></li>
+	<li><select name="country">
+		<option value ="Default"> Select a Country</option>
+		<option value ="USA"> USA</option>
+		<option value ="UK"> UK</option>
+		<option value ="Canada"> Canada</option>
+	</select>
+	</li>
+	<li><label for="zip">Zip: </label></li>
+	<li><input type="text" name="zip" size ="20"></li>
+	<li><label for="email">Email: </label></li>
+	<li><input type="email" name="email" size ="50"></li>
+	<li><label for="male">Sex: </label></li>
+	<li><input type="radio" name="male" value="male">Male</li>
+	<li><input type="radio" name="female" value="female">Female</li>
+	<li><label for="lang">Language: </label></li>
+	<li><input type="checkbox" name="en" value ="en" checked>English</li>
+	<li><input type="checkbox" name="noen" value ="noen" >Not English</li>
+	<li><label for="about">About: </label></li>
+	<li><textarea name="about"></textarea></li>
+	<li><input type ="submit" value="Submit" name="submit"></li>
+	</ul>
+</form>
+</body>
+
+</html>
