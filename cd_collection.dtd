@@ -1,0 +1,11 @@
+<!DOCTYPE collection
+[
+<!ELEMENT collection (cd+)>
+<!ELEMENT cd (title,Artist,Country,Company,Price,Year)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT Artist (#PCDATA)>
+<!ELEMENT Company (#PCDATA)>
+<!ELEMENT Country (#PCDATA)>
+<!ELEMENT Price (#PCDATA)>
+<!ELEMENT Year (#PCDATA)>
+]>
