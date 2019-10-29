@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student's Percentage</title>
+	<script type ="text/javascript">
+	function calc_per(){
+		var eng,math,sci,per,avg;
+	 eng = parseInt(document.getElementById("eng").value);
+	 math = parseInt(document.getElementById("math").value);
+	 sci = parseInt(document.getElementById("sci").value);
+	 avg = (eng+math+sci)/3;
+	 per = avg*100;
+	//document.getElementById("result").innerHTML = avg;
+	document.getElementById("result").
+innerHTML =avg;
+
+	//document.write(avg);
+}
+</script>
+</head>
+<body>
+<form>
+First Name : <input type ="text" name ="fname" id ="fname" required><br>
+Last Name : <input type ="text" name ="lname" id ="lname" required><br>
+Email : <input type ="email" name ="email" id ="email" required><br>
+Phone Number : <input type ="tel" name ="ph" id ="ph" required><br>
+English : <input type ="text" name ="eng" id ="eng" required><br>
+Maths : <input type ="text" name ="math" id ="math" required><br>
+Science : <input type ="text" name ="sci" id ="sci" required><br>
+<input type ="button"  id="submit" value="Submit" onclick = "calc_per()"><br>
+<!--<input type ="text"  id="result" placeholder="Final Percentage is :"  onclick = "calc_per()"> -->
+<p id="result" ></p>
+</form>
+</body>
+
+</html>

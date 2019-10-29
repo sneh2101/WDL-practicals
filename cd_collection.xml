@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="cd_collection.xsl"?>
+<!DOCTYPE collection SYSTEM "cd_collection.dtd">
+<collection>
+  <cd>
+    <title>DragonBallz</title>
+    <Artist>Vishal Kelani</Artist>
+    <Country>India</Country>
+    <Company>Astar</Company>
+    <Price>$90</Price>
+    <Year>2019</Year>
+  </cd>
+  <cd>
+    <title>Dark Vs Light</title>
+    <Artist>Affan Khan</Artist>
+    <Country>India</Country>
+    <Company>superStar</Company>
+    <Price>$190</Price>
+    <Year>2019</Year>
+  </cd>
+  <cd>
+    <title>League Mania</title>
+    <Artist>Vishal shekhar</Artist>
+    <Country>India</Country>
+    <Company>forIT</Company>
+    <Price>$290</Price>
+    <Year>2009</Year>
+  </cd>
+  <cd>
+    <title>Beginning</title>
+    <Artist>RK</Artist>
+    <Country>U.S.A</Country>
+    <Company>RK-Productions</Company>
+    <Price>$990</Price>
+    <Year>2015</Year>
+  </cd>
+  <cd>
+    <title>Empire Burlesque</title>
+    <Artist>Bob Dylan</Artist>
+    <Country>USA</Country>
+    <Company>Columbia</Company>
+    <Price>10.90</Price>
+    <Year>1985</Year>
+  </cd>
+</collection>
